@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Video Extraction & Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141E30, #243B55);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Video Text Extractor & Translator</h1>
+        <p>Effortlessly extract text from videos and translate it into multiple languages. Enhance accessibility and break language barriers with our advanced AI-powered solution.</p>
+        <button class="btn" onclick="getStarted()">Get Started</button>
+    </div>
+    <script>
+        function getStarted() {
+            window.location.href = "{% url 'upload_video' %}";
+        }
+    </script>
+</body>
+</html>

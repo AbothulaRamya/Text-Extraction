@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Processed Text</title>
+</head>
+<body>
+    <h1>Text Extraction Result</h1>
+    <p><strong>Extracted Text:</strong> {{ extracted_text }}</p>
+    <p><strong>Cleaned Extracted Text:</strong> {{ cleaned_text }}</p>
+    <p><strong>Translated Text:</strong> {{ translated_text }}</p>
+    <a href="{{ video_url }}" target="_blank">View Uploaded Video</a>
+</body>
+</html>
